@@ -15,13 +15,11 @@ const testCases = [
 
 describe('simpleCalculator', () => {
   // This test case is just to run this test suite, remove it when you write your own tests
-  test('should implement actions properly', () => {
-    test.each(testCases)(
-      'calculate properly',
-      ({ a, b, action, expected }: TestCaseType) => {
-        const result = simpleCalculator({ a, b, action });
-        expect(result).toBe(expected);
-      },
-    );
-  });
+  test.each(testCases)(
+    'calculate properly',
+    ({ a, b, action, expected }: TestCaseType) => {
+      const result = simpleCalculator({ a, b, action });
+      expect(result).toBe(expected);
+    },
+  );
 });
